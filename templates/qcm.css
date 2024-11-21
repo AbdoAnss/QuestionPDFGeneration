@@ -1,0 +1,167 @@
+/* Reset some basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Apply Google Fonts */
+body {
+  font-family: 'Inter', sans-serif;
+  /* Default font for body */
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Styling for the main container */
+.container {
+  max-width: 800px;
+  /* Set a max-width for better layout */
+  margin: 0 auto;
+  /* Center the content */
+  padding: 20px;
+}
+
+/* Header styles for logo and website */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 10px 20px;
+}
+
+.logo {
+  width: 150px;
+  /* Adjust the size of the logo as needed */
+  height: auto;
+}
+
+.website-url {
+  font-size: 18px;
+  color: #28a745;
+  /* Green color for the URL */
+}
+
+.website-url a {
+  text-decoration: none;
+  color: #28a745;
+  font-weight: bold;
+}
+
+.website-url a:hover {
+  text-decoration: underline;
+}
+
+/* Title styling */
+h1 {
+  text-align: center;
+  font-size: 40px;
+  /* Larger font size for the title */
+  color: #333;
+  margin-bottom: 30px;
+  font-family: 'Lora', serif;
+  /* Lora for a more elegant title */
+}
+
+/* Styling for each question */
+.question-container {
+  margin-bottom: 50px;
+  /* Increased margin for more spacing between questions */
+  padding: 20px;
+  border-radius: 10px;
+  /* Rounded corners for the entire question block */
+  background-color: #f9f9f9;
+  /* Light gray background for the question block */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for the question block */
+  page-break-inside: avoid;
+  /* Prevent page break inside a question block */
+}
+
+.question {
+  font-size: 18px;
+  /* Increased font size for better readability */
+  font-weight: normal;
+  /* Removed bold */
+  color: #444;
+  margin-bottom: 20px;
+  /* Increased spacing between question and options */
+  font-family: 'Roboto', sans-serif;
+  /* Roboto for questions */
+}
+
+/* Styling for options list */
+.options ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 20px;
+}
+
+.options li {
+  font-size: 20px;
+  /* Increased font size for better visibility */
+  margin: 20px 0;
+  /* Increased margin between each option */
+  padding: 12px;
+  background-color: #f0f0f0;
+  /* Light background for options */
+  border-radius: 8px;
+  /* Rounded corners for each option */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  /* Subtle shadow for options */
+  font-family: 'Roboto', sans-serif;
+  /* Apply Roboto for the options */
+}
+
+/* Styling for the answer box */
+.answer {
+  font-size: 18px;
+  /* Slightly larger font for the answer */
+  color: white;
+  /* Text color for the answer */
+  background-color: #28a745;
+  /* Green background */
+  padding: 15px;
+  /* Increased padding for the answer box */
+  margin-top: 30px;
+  /* Increased margin for more space between options and answer */
+  border-radius: 10px;
+  /* Rounded corners for the answer box */
+  font-weight: normal;
+  font-family: 'Poppins', sans-serif;
+  /* Poppins for the answer */
+}
+
+/* Horizontal rule styling */
+hr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+/* Page break control */
+.page-break {
+  page-break-before: always;
+}
+
+@media print {
+
+  /* Prevent page breaks within questions */
+  .question-container {
+    page-break-inside: avoid;
+  }
+
+  /* Avoid page breaks inside options or answer */
+  .options li,
+  .answer {
+    page-break-inside: avoid;
+  }
+
+  /* Force a break after each question container */
+  .question-container {
+    page-break-after: always;
+  }
+}

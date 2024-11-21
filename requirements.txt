@@ -1,0 +1,6 @@
+jinja2
+pdfkit
+reportlab
+pytest
+black
+flake8
