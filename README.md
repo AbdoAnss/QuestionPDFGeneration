@@ -11,7 +11,7 @@ A Python tool for extracting questions from text and generating professional PDF
 
 1. Clone the repository
 ```bash
-git clone https://your-repo-url/QuestionPDFGenerator.git
+git clone https://github.com/AbdoAnss/QuestionPDFGenerator.git
 cd QuestionPDFGenerator
 ```
 
@@ -40,7 +40,6 @@ python run.py
 
 # Or use individual scripts
 python -m src.text_extraction
-python -m src.pdf_generation
 ```
 
 ## Development
